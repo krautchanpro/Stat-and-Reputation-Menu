@@ -89,13 +89,6 @@ public class PlayerStatsCanvasPlugin : BaseUnityPlugin
         panelRect = windowPanel.AddComponent<RectTransform>();
         panelRect.sizeDelta = new Vector2(420, 620);
         panelRect.anchoredPosition = Vector2.zero;
-        var bg = windowPanel.AddComponent<Image>();
-        Sprite spr = Resources.GetBuiltinResource<Sprite>("UI/Skin/UISprite.psd");
-        if (spr != null)
-        {
-            bg.sprite = spr;
-            bg.type = Image.Type.Sliced;
-        }
         bg.color = new Color32(20, 30, 45, 230);
         windowPanel.AddComponent<Shadow>().effectColor = new Color(0, 0, 0, 0.5f);
         panelGroup = windowPanel.AddComponent<CanvasGroup>();
@@ -336,3 +329,4 @@ public class PlayerStatsCanvasPlugin : BaseUnityPlugin
             AddLine($"{f.Desc}: {f.Value:F1}");
     }
 }
+
